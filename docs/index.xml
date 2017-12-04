@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on HugoTube Site</title>
+    <link>https://marcanuy.github.io/hugotube/</link>
+    <description>Recent content in Index on HugoTube Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://marcanuy.github.io/hugotube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://marcanuy.github.io/hugotube/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/about/</guid>
+      <description>about</description>
+    </item>
+    
+    <item>
+      <title>Best comeback ever in football history</title>
+      <link>https://marcanuy.github.io/hugotube/goals/football-comeback/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/goals/football-comeback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nacional fans</title>
+      <link>https://marcanuy.github.io/hugotube/fans/fans-choreo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/fans-choreo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nacional fans huge party</title>
+      <link>https://marcanuy.github.io/hugotube/fans/fans-party/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/fans-party/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recoba Best Goal of the world in 1997</title>
+      <link>https://marcanuy.github.io/hugotube/goals/recoba-amazing-goal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/goals/recoba-amazing-goal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Biggest Banner - Choreo by Nacional (Uruguay)</title>
+      <link>https://marcanuy.github.io/hugotube/fans/biggest-banner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/biggest-banner/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

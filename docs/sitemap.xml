@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/goals/football-comeback/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/fans/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/goals/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/fans/fans-choreo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/fans/fans-party/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/goals/recoba-amazing-goal/</loc>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://marcanuy.github.io/hugotube/fans/biggest-banner/</loc>
+  </url>
+  
+</urlset>

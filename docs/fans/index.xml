@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fans on HugoTube Site</title>
+    <link>https://marcanuy.github.io/hugotube/fans/</link>
+    <description>Recent content in Fans on HugoTube Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://marcanuy.github.io/hugotube/fans/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nacional fans</title>
+      <link>https://marcanuy.github.io/hugotube/fans/fans-choreo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/fans-choreo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nacional fans huge party</title>
+      <link>https://marcanuy.github.io/hugotube/fans/fans-party/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/fans-party/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Biggest Banner - Choreo by Nacional (Uruguay)</title>
+      <link>https://marcanuy.github.io/hugotube/fans/biggest-banner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://marcanuy.github.io/hugotube/fans/biggest-banner/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
