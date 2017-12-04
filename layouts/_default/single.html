@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="container single">
+    <div class="row">
+	<div class="col-lg-7">
+	    
+	    <div class="embed-responsive embed-responsive-16by9">
+		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{.Params.youtube_id}}?rel=0" allowfullscreen></iframe>
+	    </div>
+	    <h1>{{.Params.title}}</h1>
+	    <div class="meta">
+		<div>
+		    {{- with .Params.author -}}.{{ end }}
+		    <p>
+			{{- with .Params.description -}}.{{end}}
+		    </p>
+		</div>
+		{{.Content}}
+	    </div>
+            <div class="disqus">
+                {{ template "_internal/disqus.html" . }}
+	    </div>
+	</div>
+	<div class="col-lg-5">
+	    {{ partial "related.html" . }}
+	</div>
+    </div>
+</article>
+{{ end }}

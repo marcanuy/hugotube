@@ -1,0 +1,4 @@
+vendor/
+node_modules/
+static/css/style.css
+static/css/style.css.map

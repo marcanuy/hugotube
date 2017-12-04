@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="container">
+    {{ range $section, $taxonomy := .Site.Sections }}
+    <h4><a class="nodecor" href="{{$taxonomy.Permalink}}">{{ $taxonomy.Title }}</a></h4>
+    
+    
+    
+    <div class="row gallery">
+	
+	{{ range $taxonomy.Pages }}
+	{{ .Render "summary"}}
+	{{ end }}
+    </div>
+    {{ end }}
+
+</div> <!-- main container -->
+{{ end }}

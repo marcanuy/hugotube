@@ -1,0 +1,12 @@
+<div class="col-3 m/-0">
+    <div class="p-/1">
+	<a href="{{ .Permalink }}">
+	    <img class="d-flex img/-thumbnail img-fluid" src="https://img.youtube.com/vi/{{.Params.youtube_id}}/hqdefault.jpg" alt="Generic placeholder image" style="max-/height: 118px; max/-width: auto">
+	    <p class="my-1 text-dark title"><strong>{{ .LinkTitle}}</strong></p>
+	    {{ with .Params.author }}
+	    <p><a href="/author/{{ . | urlize }}" class="text-muted nodecor">{{ . }}</a></p>
+	    {{ end }}
+
+	</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+name = "Hugotube"
+license = "GPL-3.0"
+licenselink = "https://github.com/marcanuy/hugotube/blob/master/LICENSE.txt"
+description = "A responsive Hugo theme based on Youtube."
+homepage = "https://github.com/marcanuy/hugotube"
+tags = ["bootstrap", "youtube", "bootstrap4"]
+features = ["responsive", "bootstrap4", "youtube"]
+min_version = 0.31
+
+[author]
+  name = "Marcelo Canina"
+  homepage = "https://marcanuy.com"

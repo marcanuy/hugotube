@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="container">
+    <h4>{{.Title}}</h4>
+    {{ $sectionPages := where .Site.Pages "Section" .Section }}
+    {{ if ge (len $sectionPages) 1 }}
+    <div class="row gallery">
+	
+	{{ range $sectionPages }}
+	{{ .Render "summary"}}
+	{{ end }}
+    </div>
+    {{ end }}
+
+</div> <!-- main container -->
+{{ end }}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ .Lang }}">
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="favicon.ico">
+
+	{{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+	<title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+
+	<!-- Customized Bootstrap CSS -->
+	<link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+	<!-- Custom styles -->
+	<link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">
+
+	{{- template "_internal/opengraph.html" . -}}
+	{{- template "_internal/google_news.html" . -}}
+	{{- template "_internal/schema.html" . -}}
+	{{- template "_internal/twitter_cards.html" . -}}
+
+	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+        {{ template "_internal/google_analytics_async.html" . }}
+	{{ end }}
+    </head>
+
+    <body>
+	{{ partial "topnav.html" . }}
+	
+	{{ block "main" . }}
+        <!-- The part of the page that begins to differ between templates -->
+	{{ end }}
+
+
+	<!-- Bootstrap core JavaScript
+	     ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="{{ .Site.BaseURL }}js/vendor/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/static/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="{{ .Site.BaseURL }}js/vendor/popper.min.js"></script>
+	<script src="{{ .Site.BaseURL }}js/vendor/bootstrap.min.js"></script>
+    </body>
+</html>

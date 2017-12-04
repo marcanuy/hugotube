@@ -1,0 +1,7 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "HugoTube Site"
+theme = "hugotube"
+
+googleAnalytics = "UA-123-45"
+disqusShortname = "yourdiscussshortname"

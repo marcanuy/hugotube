@@ -1,0 +1,15 @@
+{
+    "name": "hugotube",
+    "version": "0.0.1",
+    "description": "Hugo theme based on Youtube",
+    "main": "index.js",
+    "repository": "git@github.com:marcanuy/hugotube.git",
+    "author": "Marcelo Canina <me@marcanuy.com>",
+    "license": "MIT",
+    "dependencies": {
+	"bootstrap": "4.0.0-beta.2",
+	"jquery": "1.9.1",
+	"node-sass": "^4.7.2",
+	"popper.js": "^1.12.3"
+    }
+}
