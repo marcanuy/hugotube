@@ -6,8 +6,9 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="favicon.ico">
+	<link rel="canonical" href="{{ .Permalink }}">
 
-	{{/* NOTE: the Site's title, and if there is a page title, that is set too */}}
+	{{/* NOTE: the page title (if exists), and Site's title */}}
 	<title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
 	<!-- Customized Bootstrap CSS -->
