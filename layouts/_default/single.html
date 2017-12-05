@@ -2,14 +2,12 @@
 <article class="container single">
     <div class="row">
 	<div class="col-lg-7">
-	    
-	    <div class="embed-responsive embed-responsive-16by9">
-		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{.Params.youtube_id}}?rel=0" allowfullscreen></iframe>
-	    </div>
+	    {{ partial "single/media.html" . }}
 	    <h1>{{.Params.title}}</h1>
 	    <div class="meta">
 		<div>
 		    {{- with .Params.author -}}.{{ end }}
+		    {{ partial "share.html" .}}
 		    <p>
 			{{- with .Params.description -}}.{{end}}
 		    </p>

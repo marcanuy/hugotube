@@ -1,0 +1,17 @@
+<div class="site-share pb-2">
+    {{ if ne (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <ul class="share-buttons list-inline mb-1 text-center d-flex">
+	<li class="list-inline-item ">
+	    {{ partial "share/twitter.html" .}}
+	</li>
+	<li class="list-inline-item ">
+	    {{ partial "share/google.html" .}}
+	</li>
+	<li class="list-inline-item ">
+	    {{ partial "share/facebook.html" .}}
+	</li>
+    </ul>
+    {{ else }}
+    <div class="bg-danger">share buttons placeholder</div>
+    {{ end }}
+</div>
