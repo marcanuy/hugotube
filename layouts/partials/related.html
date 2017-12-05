@@ -2,22 +2,25 @@
 {{ $filteredPosts := where $filteredPosts "Kind" "!=" "Section" }}
 {{ $randomRelatedPosts :=  shuffle $filteredPosts | first 5}}
 {{$len := (len $randomRelatedPosts)}}
-<h6>Related</h6>
-{{ with $randomRelatedPosts }}
-<ul class="list-unstyled related">
-    {{ range $index, $element := . }}
-    <li class="media {{if ne (add $index 1) $len }}mb-2{{end}}">
-	<a href="{{ .RelPermalink }}">
-	    <img class="d-flex mr-2" src="https://img.youtube.com/vi/{{.Params.youtube_id}}/mqdefault.jpg" alt="{{.Title}}">
-	</a>
-	<a href="{{ .RelPermalink }}" class="nodecor text-dark title">
-	    <div class="media-body">
-		<h5 class="mt-0 mb-1">{{.Title}}</h5>
-		{{- with .Params.author -}}.{{ end }}
-		{{ .Description }}
-	    </div>
-	</a>
-    </li>
+
+<section class="sidebar-module">
+    <h6>{{ i18n "relatedPosts" }}</h6>
+    {{ with $randomRelatedPosts }}
+    <ul class="list-unstyled related">
+	{{ range $index, $element := . }}
+	<li class="media {{if ne (add $index 1) $len }}mb-2{{end}}">
+	    <a href="{{ .RelPermalink }}">
+		<img class="d-flex mr-2" src="https://img.youtube.com/vi/{{.Params.youtube_id}}/mqdefault.jpg" alt="{{.Title}}">
+	    </a>
+	    <a href="{{ .RelPermalink }}" class="nodecor text-dark title">
+		<div class="media-body">
+		    <h5 class="mt-0 mb-1">{{.Title}}</h5>
+		    {{- with .Params.author -}}.{{ end }}
+		    {{ .Description }}
+		</div>
+	    </a>
+	</li>
+	{{ end }}
+    </ul>
     {{ end }}
-</ul>
-{{ end }}
+</section>
