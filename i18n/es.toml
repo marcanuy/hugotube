@@ -1,0 +1,23 @@
+[relatedPosts]
+other = "Relacionados"
+
+[about]
+other = "Acerca de"
+
+[home]
+other = "Inicio"
+
+[translations]
+other = "Traducciones"
+
+[wordCount]
+other = "Número de palabras"
+
+[taxonomyTerms]
+other = "Lista de términos de taxonomía"
+
+[taxonomyList]
+other = "Lista de páginas con la etiqueta {{ .Title }}"
+
+[tagTitle]
+other = "Páginas de {{ .Title }}"

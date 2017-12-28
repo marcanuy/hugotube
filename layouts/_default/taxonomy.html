@@ -1,0 +1,20 @@
+{{ define "title" }}
+{{ i18n "tagTitle" . }}
+{{ end }}
+
+{{ define "main" }}
+  {{ with .Params.description }}
+    <p>{{.}}</p>
+  {{ end }}
+
+  <h2>{{ i18n "taxonomyList" .}}</h2>
+
+  <ul>
+    {{ range .Data.Pages }}
+       <li>
+         <a href="{{ .Permalink}}">{{ .Title }}</a>
+       </li>
+    {{ end }}
+  </ul>
+
+{{ end }}
