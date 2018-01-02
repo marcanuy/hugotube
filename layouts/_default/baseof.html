@@ -3,7 +3,8 @@
     <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta property="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+	
+	<meta property="description" content='{{ block "description" . }}{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}{{ end }}' />
 
 	<meta name="author" content="{{ with .Site.Params.author }}{{.}}{{end}}">
 	<link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">

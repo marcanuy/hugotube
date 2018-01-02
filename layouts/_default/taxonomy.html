@@ -1,20 +1,29 @@
-{{ define "title" }}
+{{- define "title" -}}
 {{ i18n "tagTitle" . }}
-{{ end }}
+{{- end -}}
+
+{{- define "description" -}}
+{{ i18n "tagDescription" . }}
+{{- end -}}
 
 {{ define "main" }}
-  {{ with .Params.description }}
-    <p>{{.}}</p>
-  {{ end }}
 
-  <h2>{{ i18n "taxonomyList" .}}</h2>
+<div class="container">
 
-  <ul>
-    {{ range .Data.Pages }}
-       <li>
-         <a href="{{ .Permalink}}">{{ .Title }}</a>
-       </li>
-    {{ end }}
-  </ul>
+    <h1>{{ i18n "taxonomyTitle" .}}</h1>
 
+    <p class="lead">
+	{{ with .Params.description }}
+	{{.}}
+	{{else }}
+	{{ i18n "tagDescription" . }}
+	{{ end }}
+    </p>
+
+    <div class="row gallery">
+	{{ range .Data.Pages }}
+	{{ .Render "summary"}}
+	{{ end }}
+    </div>
+</div>
 {{ end }}

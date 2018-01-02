@@ -16,8 +16,11 @@ other = "Word count"
 [taxonomyTerms]
 other = "List all taxonomy terms"
 
-[taxonomyList]
+[taxonomyTitle]
 other = "List of pages with tag {{ .Title }}"
 
 [tagTitle]
 other = "{{ .Title }} pages"
+
+[tagDescription]
+other = "{{ .Title }} amazing pages!"

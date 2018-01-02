@@ -16,8 +16,11 @@ other = "Número de palabras"
 [taxonomyTerms]
 other = "Lista de términos de taxonomía"
 
-[taxonomyList]
+[taxonomyTitle]
 other = "Lista de páginas con la etiqueta {{ .Title }}"
 
 [tagTitle]
 other = "Páginas de {{ .Title }}"
+
+[tagDescription]
+other = "Páginas sobre {{ .Title }}!"
