@@ -7,7 +7,7 @@ theme = "hugotube"
 enableRobotsTXT = true
 
 googleAnalytics = "UA-123-45"
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "hugotube"
 
 [Social]
 # facebook        = "marcanuy"
