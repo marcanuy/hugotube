@@ -11,9 +11,9 @@ structure:
 css-compile:
 	$(NODE_SASS_BIN) --output-style expanded --source-map true --source-map-contents true --precision 6 src/style.scss static/css/style.css
 build-jquery:
-	cp node_modules/jquery/jquery.min.js static/js/vendor/
+	cp node_modules/jquery/dist/jquery.min.js static/js/vendor/
 build-popper:
-	cp node_modules/popper.js/dist/popper.min.js static/js/vendor/
+	cp node_modules/popper.js/dist/umd/popper.min.js static/js/vendor/
 build-bootstrapjs:
 	cp node_modules/bootstrap/dist/js/bootstrap.min.js static/js/vendor/
 
