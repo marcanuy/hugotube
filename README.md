@@ -1,4 +1,4 @@
-HugoTube - Responsive Bootstrap 4 Youtube like theme
+HugoTube - Responsive Bootstrap 4 Youtube-like theme
 ================================================================
 
 [Hugo](https://gohugo.io) [theme](https://gohugo.io/themes/) based on
