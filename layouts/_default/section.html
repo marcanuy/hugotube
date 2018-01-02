@@ -1,7 +1,16 @@
 {{ define "main" }}
+{{/* $paginator := .Paginate (.Pages) */}}
+{{/* range $paginator.Pages */}}
+{{/*.Title*/}}
+{{/*end*/}}
+
 <div class="container">
-    <h4>{{.Title}}</h4>
-    {{ $sectionPages := where .Site.Pages "Section" .Section }}
+    <h1>{{.Title}}</h1>
+    
+    {{ .Content | markdownify }}
+    {{/* $sectionPages := where .Data.pages.Pages "Section" .Section */}}
+
+    {{ $sectionPages := .Data.Pages }}
     {{ if ge (len $sectionPages) 1 }}
     <div class="row gallery">
 	
@@ -10,6 +19,18 @@
 	{{ end }}
     </div>
     {{ end }}
+
+    {{range $section, $taxonomy:=.Sections}}
+    {{$section}}-{{$taxonomy}}
+    
+    <h4><a class="nodecor" href="{{$taxonomy.Permalink}}">{{ $taxonomy.Title }}</a></h4>
+    <div class="row gallery">
+	{{ range $taxonomy.Pages }}
+	{{ .Render "summary"}}
+	{{ end }}
+    </div>
+    {{end}}
+
 
 </div> <!-- main container -->
 {{ end }}
