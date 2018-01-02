@@ -1,19 +1,34 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="{{.Site.BaseURL}}">HugoTube</a>
-    <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{{.Site.BaseURL}}">{{.Site.Params.brand}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+	<ul class="navbar-nav">
+	    {{ $currentPage := . }}
 
-    <div class="justify-content-end float-right">
-        <ul class="navbar-nav ">
-            <li class="nav-item active">
-		<a class="nav-link" href="#">Notifications <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-		<a class="nav-link" href="#">Profile</a>
-            </li>
-        </ul>
+	    {{ range .Site.Menus.main }}
+
+	    {{ if .HasChildren }}
+	    <li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    {{ .Pre }}
+		    <span>
+			{{.Name}}
+		    </span>
+		</a>
+		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		    {{ range .Children }}
+		    <a class="dropdown-item" href="{{.URL}}">{{.Name}}</a>
+		    {{ end }}
+		</div>
+	    </li>
+	    {{else}}
+	    <li class="nav-item {{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+		<a class="nav-link" href="{{.URL}}">{{.Pre|emojify}}<span>{{.Name}}</span> {{if $currentPage.HasMenuCurrent "main" . }}<span class="sr-only">({{ i18n "current"}})</span>{{end}}</a>
+	    </li>
+	    {{end}}
+	    {{end}}
+	</ul>
     </div>
 </nav>
-
