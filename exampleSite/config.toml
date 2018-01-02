@@ -3,5 +3,22 @@ languageCode = "en-us"
 title = "HugoTube Site"
 theme = "hugotube"
 
+# Build robots.txt file
+enableRobotsTXT = true
+
 googleAnalytics = "UA-123-45"
 disqusShortname = "yourdiscussshortname"
+
+[Social]
+# facebook        = "marcanuy"
+# facebook_admin  = "12345"  # This needs to be a page admin to get domain insights
+twitter         = "marcanuy"
+
+# Theme variables
+#
+[params]
+  brand = "HugoTube"
+  
+  # Google page level ads
+  googleAdClient = "ca-pub-1234567890"
+  googleSiteVerification = "abcdefghijklmnoqrstuvwxyz"
