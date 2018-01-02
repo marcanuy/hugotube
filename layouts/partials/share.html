@@ -1,5 +1,5 @@
 <div class="site-share pb-2">
-    {{ if ne (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
     <ul class="share-buttons list-inline mb-1 text-center d-flex">
 	<li class="list-inline-item ">
 	    {{ partial "share/twitter.html" .}}
