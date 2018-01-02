@@ -3,9 +3,10 @@
     <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="icon" href="favicon.ico">
+	<meta property="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+
+	<meta name="author" content="{{ with .Site.Params.author }}{{.}}{{end}}">
+	<link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
 	<link rel="canonical" href="{{ .Permalink }}">
 
 	{{/* NOTE: the page title (if exists), and Site's title */}}
@@ -21,21 +22,51 @@
 	{{- template "_internal/schema.html" . -}}
 	{{- template "_internal/twitter_cards.html" . -}}
 
+	{{ with .Site.Params.googleSiteVerification }}
+	<meta name="google-site-verification" content="{{.}}" />
+	{{ end }}
+	
+	{{ if .Site.Params.googleAdClient }}
+	{{ partial "adsense-pagelevelads.html" . }}
+	{{ end }}
+
+	{{ if .RSSLink }}
+	<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{ end }}
+
 	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
         {{ template "_internal/google_analytics_async.html" . }}
 	{{ end }}
 
 	{{ partial "head_custom.html" . }}
+
     </head>
 
     <body>
 	{{ partial "topnav.html" . }}
+
+	<div class="content">
+	    {{ partial "content_top" . }}
+
+	    {{ block "main" . }}
+            <!-- The part of the page that begins to differ between templates -->
+	    {{ end }}
+	    
+	    {{ if ne (getenv "HUGO_ENV") "production"  }}
+	    {{ partial "i18nlist.html" . }}
+	    {{end}}
+	    {{ block "content_bottom" . }}{{end}}
+	    
+
+	    
+	</div>
+	<div class="container">
+	    {{ partial "breadcrumb" . }}
+	</div>
 	
-	{{ block "main" . }}
-        <!-- The part of the page that begins to differ between templates -->
-	{{ end }}
-
-
+	{{ partial "footer.html" . }}
+	
 	<!-- Bootstrap core JavaScript
 	     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
