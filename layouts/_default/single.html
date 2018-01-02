@@ -1,26 +1,53 @@
 {{ define "main" }}
 <article class="container single">
+    {{$onecolumn := eq .Params.onecolumn "true"}}
+    {{ if not $onecolumn }}
     <div class="row">
 	<div class="col-lg-7">
+    {{end}}
+	    {{ partial "single/placeholders/media_before.html" . }}
+	    
 	    {{ partial "single/media.html" . }}
-	    <h1>{{.Params.title}}</h1>
+
+	    <div class="row">
+		<div class="col-7">
+		    <h1>{{.Params.title}}</h1>
+		</div>
+		<div class="col-5">
+		    <div class="mt-4">
+			{{ partial "share.html" .}}
+		    </div>
+		    {{ partial "tags.html" .}}
+		</div>
+	    </div>
+
 	    <div class="meta">
 		<div>
 		    {{- with .Params.author -}}.{{ end }}
-		    {{ partial "share.html" .}}
-		    <p>
-			{{- with .Params.description -}}.{{end}}
-		    </p>
 		</div>
-		{{.Content}}
+		
+		{{ partial "single/placeholders/article_before.html" .}}
+		{{- with .Content -}}
+		{{.}}
+		{{ else }}
+		{{.Params.description}}
+		{{- end -}}
+
+		{{ partial "single/placeholders/article_after.html" .}}
 	    </div>
             <div class="disqus">
                 {{ template "_internal/disqus.html" . }}
 	    </div>
+	    {{ if not $onecolumn }}
 	</div>
 	<div class="col-lg-5">
+	    {{end}}
+	    {{ partial "single/placeholders/related_before.html" . }}
 	    {{ partial "related.html" . }}
+	    {{ partial "single/placeholders/related_after.html" . }}
+	    {{ if not $onecolumn }}
 	</div>
     </div>
+    {{end}}
 </article>
 {{ end }}
