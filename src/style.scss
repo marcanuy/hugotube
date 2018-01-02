@@ -2,6 +2,15 @@
 // BS variable overrides //
 ///////////////////////////
 
+$enable-caret:              true;
+$enable-rounded:            true;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+$enable-hover-media-query:  true;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
 $font-family-youtube: Roboto, Arial, sans-serif;
 //$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-base:            $font-family-youtube;
@@ -62,3 +71,4 @@ $headings-line-height:        1.2 !default;
 	border-bottom: 1px solid $gray-400;
     }
 }
+
