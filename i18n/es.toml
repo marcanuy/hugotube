@@ -24,3 +24,12 @@ other = "Páginas de {{ .Title }}"
 
 [tagDescription]
 other = "Páginas sobre {{ .Title }}!"
+
+[errorTitle]
+other = "404 Página No Encontrada"
+
+[errorNotFound]
+other = "Lo siento mucho pero no podemos encontrar la página que estabas buscando."
+
+[errorGoHome]
+other = "Por favor, regresa al inicio"

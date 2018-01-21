@@ -1,0 +1,13 @@
+{{ define "title"}}
+{{i18n "errorTitle"}}
+{{ end }}
+
+{{ define "main"}}
+<main id="main">
+    <article>
+	<h1>{{i18n "errorTitle"}}</h1>
+	<p>{{i18n "errorNotFound"}}</p>
+	<p><a href="{{ "/" | relURL }}">{{ i18n "errorGoHome"}}</a>.</p>
+    </article>
+</main>
+{{ end }}

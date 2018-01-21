@@ -24,3 +24,12 @@ other = "{{ .Title }} pages"
 
 [tagDescription]
 other = "{{ .Title }} amazing pages!"
+
+[errorTitle]
+other = "404 Page Not Found"
+
+[errorNotFound]
+other = "Sorry, but we couldn't find the page you're looking for."
+
+[errorGoHome]
+other = "Please head back home"
