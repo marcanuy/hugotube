@@ -22,3 +22,5 @@ twitter         = "marcanuy"
   # Google page level ads
   googleAdClient = "ca-pub-1234567890"
   googleSiteVerification = "abcdefghijklmnoqrstuvwxyz"
+  bingSiteVerification = "453BB779294406F41BD202E3E24FFE55"
+  yandexSiteVerification = "44f8600b265eb2a3"
