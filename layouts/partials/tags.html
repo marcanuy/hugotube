@@ -1,7 +1,7 @@
 {{ if .Params.tags }}
 <i class="fa fa-tag" aria-hidden="true"></i>&nbsp;
 {{ range $index, $tag := .Params.tags }}
-<a class="badge badge-secondary" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" rel="tag">
+<a class="badge badge-secondary" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/" rel="tag">
     {{ . }}
 </a>
 {{ end }}
