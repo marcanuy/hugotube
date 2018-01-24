@@ -1,10 +1,19 @@
-<div class="col-3 m/-0">
-    <div class="p-/1">
+<div class="col-3">
+    <div class="">
 	<a href="{{ .Permalink }}">
-	    <img class="d-flex img/-thumbnail img-fluid" src="https://img.youtube.com/vi/{{.Params.youtube_id}}/hqdefault.jpg" alt="Generic placeholder image" style="max-/height: 118px; max/-width: auto">
+	    {{ if .Params.youtube_id }}
+	    <img class="d-flex img-fluid"
+		 src="https://img.youtube.com/vi/{{.Params.youtube_id}}/hqdefault.jpg"
+		 alt="{{ .Title }}">
+	    {{ else }}
+	    <img class="d-flex img-fluid"
+		 src="https://img.youtube.com/vi/{{.Params.image}}/hqdefault.jpg"
+		 alt="{{ .Title }}">
+	    {{ end }}
+
 	    <p class="my-1 text-dark title"><strong>{{ .LinkTitle}}</strong></p>
 	    {{ with .Params.author }}
-	    <p><a href="/author/{{ . | urlize }}" class="text-muted nodecor">{{ . }}</a></p>
+	    <p><a href="/author/{{ . | urlize }}/" class="text-muted nodecor">{{ . }}</a></p>
 	    {{ end }}
 
 	</a>
