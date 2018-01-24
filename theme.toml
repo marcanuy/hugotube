@@ -1,7 +1,7 @@
 name = "Hugotube"
-license = "GPL-3.0"
-licenselink = "https://github.com/marcanuy/hugotube/blob/master/LICENSE.txt"
-description = "A responsive Hugo theme based on Youtube."
+license = "MIT"
+licenselink = "https://github.com/marcanuy/hugotube/blob/master/LICENSE.md"
+description = "A responsive Hugo theme based on Youtube layout."
 homepage = "https://github.com/marcanuy/hugotube"
 tags = ["bootstrap", "youtube", "bootstrap4"]
 features = ["responsive", "bootstrap4", "youtube"]
