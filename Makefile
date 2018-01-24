@@ -24,6 +24,6 @@ serve: clean structure css-compile build-jquery build-popper build-bootstrapjs
 
 ######################
 generate-githubpages:
-	rm -fr docs && $(HUGO) --baseURL https://marcanuy.github.io/hugotube/ --source=exampleSite --themesDir=../.. && mv exampleSite/public docs && touch docs/.nojekyll
+	rm -fr docs && HUGO_ENV=production $(HUGO) --baseURL https://marcanuy.github.io/hugotube/ --source=exampleSite --themesDir=../.. && mv exampleSite/public docs && touch docs/.nojekyll
 clean:
 	rm -fr exampleSite/public/
