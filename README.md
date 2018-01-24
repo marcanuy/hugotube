@@ -6,6 +6,8 @@ the [Youtube](https://youtube.com/) layout.
 
 <https://marcanuy.github.io/hugotube/>.
 
+![HugoTube Theme screenshot](https://raw.githubusercontent.com/marcanuy/hugotube/master/images/screenshot.png)
+
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
