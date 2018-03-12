@@ -14,9 +14,9 @@
 	<title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
 	<!-- Customized Bootstrap CSS -->
-	<link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet">
+	<link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet" type="text/css">
 	<!-- Custom styles -->
-	<link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet">
+	<link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet" type="text/css">
 
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/google_news.html" . -}}
