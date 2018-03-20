@@ -8256,4 +8256,8 @@ a.text-dark:hover {
   border-bottom: 1px solid #ced4da;
 }
 
+img {
+  max-width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
