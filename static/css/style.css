@@ -8256,7 +8256,7 @@ a.text-dark:hover {
   border-bottom: 1px solid #ced4da;
 }
 
-img {
+.single .meta img {
   max-width: 100%;
 }
 
