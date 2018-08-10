@@ -81,11 +81,15 @@
 	
         
 <script>
-window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-ga('create', 'UA-123-45', 'auto');
-ga('send', 'pageview');
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
 </script>
-<script async src='//www.google-analytics.com/analytics.js'></script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
 
 	
 
@@ -193,6 +197,7 @@ ga('send', 'pageview');
 		</div>
 		
 		
+		
 	    </div>
             <div class="disqus">
                 <div id="disqus_thread"></div>
@@ -232,24 +237,24 @@ ga('send', 'pageview');
     <ul class="list-unstyled related">
 	
 	<li class="media mb-2">
-	    <a href="/hugotube/fans/fans-choreo/">
-		<img class="d-flex mr-2" src="https://img.youtube.com/vi/mAsnBnJieec/mqdefault.jpg" alt="Nacional fans">
-	    </a>
-	    <a href="/hugotube/fans/fans-choreo/" class="nodecor text-dark title">
-		<div class="media-body">
-		    <h5 class="mt-0 mb-1">Nacional fans</h5>
-		    
-		</div>
-	    </a>
-	</li>
-	
-	<li class="media ">
 	    <a href="/hugotube/fans/biggest-banner/">
 		<img class="d-flex mr-2" src="https://img.youtube.com/vi/MHO9-9lnpVs/mqdefault.jpg" alt="The Biggest Banner - Choreo by Nacional (Uruguay)">
 	    </a>
 	    <a href="/hugotube/fans/biggest-banner/" class="nodecor text-dark title">
 		<div class="media-body">
 		    <h5 class="mt-0 mb-1">The Biggest Banner - Choreo by Nacional (Uruguay)</h5>.
+		    
+		</div>
+	    </a>
+	</li>
+	
+	<li class="media ">
+	    <a href="/hugotube/fans/fans-choreo/">
+		<img class="d-flex mr-2" src="https://img.youtube.com/vi/mAsnBnJieec/mqdefault.jpg" alt="Nacional fans">
+	    </a>
+	    <a href="/hugotube/fans/fans-choreo/" class="nodecor text-dark title">
+		<div class="media-body">
+		    <h5 class="mt-0 mb-1">Nacional fans</h5>
 		    
 		</div>
 	    </a>
