@@ -44,9 +44,7 @@
 	<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 	{{ end }}
 
-	{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-        {{ template "_internal/google_analytics_async.html" . }}
-	{{ end }}
+	{{ partial "google_analytics.html" . }}
 
 	{{ partial "head_custom.html" . }}
 
@@ -61,10 +59,12 @@
 	    {{ block "main" . }}
             <!-- The part of the page that begins to differ between templates -->
 	    {{ end }}
-	    
-	    {{ if ne (getenv "HUGO_ENV") "production"  }}
+
+	    {{ if .Site.IsServer }}
+	    <!--ONLY DEVELOPMENT-->
 	    {{ partial "i18nlist.html" . }}
-	    {{end}}
+	    {{ end }}
+
 	    {{ block "content_bottom" . }}{{end}}
 	    
 
