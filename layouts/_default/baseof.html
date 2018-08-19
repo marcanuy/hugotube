@@ -18,6 +18,13 @@
 	<!-- Custom styles -->
 	<link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet" type="text/css">
 
+	{{/* COMMENT
+	{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
+	{{ $style := resources.Get "sass/main.scss" | toCSS $options | postCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" >
+	*/}}
+
+
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/google_news.html" . -}}
 	{{- template "_internal/schema.html" . -}}

@@ -3,15 +3,23 @@
 {{ define "main" }}
 
 <div class="container">
-    {{ range $section, $taxonomy := .Site.Sections }}
-    <h4><a class="nodecor" href="{{$taxonomy.Permalink}}">{{ $taxonomy.LinkTitle }}</a></h4>
+
+    <article class="p-3 mb-4 bg-danger text-white">
+	<header>
+	    <h1>{{.Title}}</h1>
+	</header>
+	{{ .Content}}
+    </article>
+    
+    {{ range .Site.Sections }}
+    <h4><a class="nodecor" href="{{.Permalink}}">{{ .LinkTitle }}</a></h4>
     <div class="row gallery">
-	{{ range $taxonomy.Pages }}
+	{{ range .Paginator.Pages }}
 	{{ .Render "summary"}}
 	{{ end }}
     </div>
     {{ end }}
-    <article class="p-3 mb-2 bg-danger text-white"><header><h1>{{.Title}}</h1></header>{{ .Content}}</article>
-    
+
+
 </div> <!-- main container -->
 {{ end }}
