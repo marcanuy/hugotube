@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Lang }}" itemscope itemtype='http://schema.org/{{ block "schematype" . }}WebPage{{ end }}'>
+<html lang="{{ .Lang }}" itemscope itemtype='https://schema.org/{{ block "schematype" . }}WebPage{{ end }}'>
     <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,17 +13,9 @@
 	{{/* NOTE: the page title (if exists), and Site's title */}}
 	<title>{{ block "title" . }}{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 
-	<!-- Customized Bootstrap CSS -->
-	<link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet" type="text/css">
-	<!-- Custom styles -->
-	<link href="{{ .Site.BaseURL }}css/custom.css" rel="stylesheet" type="text/css">
-
-	{{/* COMMENT
 	{{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "themes/simpleit/node_modules")) }}
-	{{ $style := resources.Get "sass/main.scss" | toCSS $options | postCSS | minify | fingerprint }}
+	{{ $style := resources.Get "sass/main.scss" | toCSS $options | minify | fingerprint }}
 	<link rel="stylesheet" href="{{ $style.RelPermalink }}" >
-	*/}}
-
 
 	{{- template "_internal/opengraph.html" . -}}
 	{{- template "_internal/google_news.html" . -}}
@@ -83,12 +75,11 @@
 	
 	{{ partial "footer.html" . }}
 	
-	<!-- Bootstrap core JavaScript
-	     ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="{{ .Site.BaseURL }}js/vendor/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/static/js/vendor/jquery.min.js"><\/script>')</script>
-	<script src="{{ .Site.BaseURL }}js/vendor/popper.min.js"></script>
-	<script src="{{ .Site.BaseURL }}js/vendor/bootstrap.min.js"></script>
+	{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+	{{ $popperjs := resources.Get "js/vendor/popper.min.js" }}
+	{{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+	{{ $js := slice $jquery $popperjs $bootstrap | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+
+	<script async src="{{$js.RelPermalink}}" integrity="{{ $js.Data.Integrity }}"></script>
     </body>
 </html>

@@ -11,56 +11,26 @@ the [Youtube](https://youtube.com/) layout.
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
 
-- [HugoTube - Responsive Bootstrap 4 Youtube like theme](#hugotube---responsive-bootstrap-4-youtube-like-theme)
-- [Features](#features)
-    - [Bootstrap variables customization](#bootstrap-variables-customization)
-    - [updating Bootstrap](#updating-bootstrap)
+- [HugoTube - Responsive Bootstrap 4 Youtube-like theme](#hugotube---responsive-bootstrap-4-youtube-like-theme)
+- [Customize styles for your website](#customize-styles-for-your-website)
 - [Installation](#installation)
     - [Theme](#theme)
+- [Developing Theme](#developing-theme)
+    - [Bootstrap variables customization](#bootstrap-variables-customization)
+    - [Updating Bootstrap](#updating-bootstrap)
     - [Deps](#deps)
     - [Build css](#build-css)
-- [References](#references)
 
 <!-- markdown-toc end -->
 
-# Features
+# Customize styles for your website
 
-## Bootstrap variables customization
+If you want to change some styling to fit your own website needs, copy
+the following files to your website root path and edit them:
 
-Customization of Bootstrap variables can be done in two steps:
-
-1. override variables:
-
-> Every Sass variable in Bootstrap 4 includes the !default flag
-> allowing you to override the variable’s default value in your own
-> Sass without modifying Bootstrap’s source code. Copy and paste
-> variables as needed, modify their values, and remove the !default
-> flag. If a variable has already been assigned, then it won’t be
-> re-assigned by the default values in Bootstrap.
-
-In `src/style.scss` we can customize any Bootstrap
-[variable](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
-and then import the complete Bootstrap styles which will incorporate
-our custom design:
-
-	 // Your variable overrides
-	 $body-bg: #000;
-	 $body-color: #111;
-
-	 // Bootstrap and its default variables
-	 @import "../node_modules/bootstrap/scss/bootstrap";
-
-2. Regenerate stylesheet:
-
-The above file will be processed with `node-sass` and generate
-`static/css/style.css` after executing the `make build` recipe.
-
-More on Bootstrap 4 customization: <https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults>.
-
-## updating Bootstrap
-
-Bootstrap is a `package.json` dependency, it can easily be updated
-with `make update`.
+- `assets/sass/custom_variables.scss`: customize variables used by Bootstrap.
+- `assets/sass/styles.scss`: your main website styles with all
+  Bootstrap variables avaiable.
 
 # Installation
 
@@ -84,17 +54,30 @@ In order to update all the existing submodules from their upstreams, you can eit
 
     $ git submodule foreach git pull
 
+# Developing Theme
+
+## Bootstrap variables customization
+
+In `assets/scss/custom_variables.scss` we can customize any Bootstrap
+[variable](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss)
+and then import the complete Bootstrap styles which will incorporate
+our custom design:
+
+Then use all Bootstrap variables theme's styles at
+`assets/scss/styles.scss`.
+
+More on Bootstrap 4 customization: <https://getbootstrap.com/docs/4.0/getting-started/theming/#variable-defaults>.
+
+## Updating Bootstrap
+
+Bootstrap is a `package.json` dependency, it can easily be updated
+with `make update`.
+
 ## Deps
 
-Run `make install` to install theme dependencies. That will run `yarn install` (or `npm install`).
+Run `make install` to install theme dependencies.
 
 ## Build css
 
 Run `make build` to generate CSS styles and copy the necessary
 Javascript libraries.
-
-# References
-
-- [Bootstrap docs](https://getbootstrap.com/docs/4.0/)
-- [Hugo docs](https://gohugo.io/)
-- Installation instruction taken from [Hugo dimension theme](https://themes.gohugo.io/dimension)

@@ -1,0 +1,51 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 100%;
+}
+
+.nodecor:hover {
+    text-decoration: none;
+}
+
+.gallery {
+    a:hover {
+	text-decoration: none;
+    }
+    .title {
+	letter-spacing: -0.99px;
+	line-height: $headings-line-height;
+    }
+}
+
+.related {
+    .title {
+	overflow: hidden;
+	font-size: 0.9rem;
+	font-weight: 500;
+	line-height: 1.6rem;
+	color: $gray-900;
+	
+    }
+}
+
+.single {
+    h1 {
+	display: block;
+	max-height: 4.8rem;
+	font-weight: 400;
+	line-height: 2.4rem;
+	font-size: 1.3rem;
+	letter-spacing: -0.2px;
+	padding: 20px 0 8px 0;
+    }
+
+    .meta {
+	margin: 5px auto;
+	border-top: 1px solid $gray-400;
+	border-bottom: 1px solid $gray-400;
+
+	img {
+	    max-width: 100%;
+	}
+    }
+}
