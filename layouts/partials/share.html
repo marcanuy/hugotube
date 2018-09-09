@@ -1,17 +1,21 @@
 <div class="site-share pb-2">
+    {{ if (eq .Site.Params.shareButtonsType "static")}}
+    {{ partial "share_static.html" . }}
+    {{else}}
     {{ if .Site.IsServer }}
     <div class="bg-danger">share buttons placeholder</div>
     {{ else }}
     <ul class="share-buttons list-inline mb-1 text-center d-flex">
 	<li class="list-inline-item ">
-	    {{ partial "share/twitter.html" .}}
+	    {{ partial "share/twitter.html" . }}
 	</li>
 	<li class="list-inline-item ">
-	    {{ partial "share/google.html" .}}
+	    {{ partial "share/google.html" . }}
 	</li>
 	<li class="list-inline-item ">
-	    {{ partial "share/facebook.html" .}}
+	    {{ partial "share/facebook.html" . }}
 	</li>
     </ul>
+    {{ end }}
     {{ end }}
 </div>

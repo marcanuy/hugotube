@@ -23,6 +23,17 @@ the [Youtube](https://youtube.com/) layout.
 
 <!-- markdown-toc end -->
 
+# Features
+
+- Mobile design first with Bootstrap 4 grid
+- Using Hugo pipes to generate one 
+  - CSS file from SCSS
+  - Javascript file from multiple JS
+- Choose Share Buttons type
+  - static https://sharingbuttons.io/
+  - each site javascript share buttons (Google, Twitter and Facebook
+    with counter)
+
 # Customize styles for your website
 
 If you want to change some styling to fit your own website needs, copy
