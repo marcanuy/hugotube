@@ -65,6 +65,16 @@ In order to update all the existing submodules from their upstreams, you can eit
 
     $ git submodule foreach git pull
 
+## Using theme
+
+After installing In order to see your site in action, run Hugo's built-in local server.
+
+    $ hugo server -t hugotube
+
+Now enter [`localhost:1313`](http://localhost:1313) in the address bar of your browser.
+
+Or just set `theme = "hugotube"` in your configuration.
+
 # Developing Theme
 
 ## Bootstrap variables customization
