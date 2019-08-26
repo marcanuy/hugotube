@@ -1,4 +1,4 @@
-{{ $filteredPosts := where (where .Site.RegularPages "Section" .Section) "UniqueID" "!=" .UniqueID }}
+{{ $filteredPosts := where (where .Site.RegularPages "Section" .Section) "UniqueID" "!=" .File.UniqueID }}
 {{ $filteredPosts := where $filteredPosts "Kind" "!=" "Section" }}
 {{ $randomRelatedPosts :=  shuffle $filteredPosts | first 5}}
 {{$len := (len $randomRelatedPosts)}}
