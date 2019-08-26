@@ -4,7 +4,7 @@
 
 <h2>{{ i18n "taxonomyTerms" . }}</h2>
 <ul class="tags">
-    {{ range ($.Site.GetPage "taxonomyTerm" "tags").Pages }}
+    {{ range ($.Site.GetPage "taxonomyTerm" "tags").RegularPages }}
     <li><a href="{{ .Permalink }}">{{ .Title}}</a></li>
     {{ end }}
 </ul>

@@ -1,7 +1,7 @@
 {{ define "schematype" }}CollectionPage{{ end }}
 
 {{ define "main" }}
-{{/* $paginator := .Paginate (.Pages) */}}
+{{/* $paginator := .Paginate (.RegularPages) */}}
 {{/* range $paginator.Pages */}}
 {{/*.Title*/}}
 {{/*end*/}}
@@ -10,7 +10,7 @@
     <h1>{{.Title}}</h1>
     
     {{ .Content | markdownify }}
-    {{/* $sectionPages := where .Data.pages.Pages "Section" .Section */}}
+    {{/* $sectionPages := where .Data.pages.RegularPages "Section" .Section */}}
 
     {{ $sectionPages := .Data.Pages }}
     {{ if ge (len $sectionPages) 1 }}
@@ -27,7 +27,7 @@
     
     <h4><a class="nodecor" href="{{$taxonomy.Permalink}}">{{ $taxonomy.Title }}</a></h4>
     <div class="row gallery">
-	{{ range $taxonomy.Pages }}
+	{{ range $taxonomy.RegularPages }}
 	{{ .Render "summary"}}
 	{{ end }}
     </div>
